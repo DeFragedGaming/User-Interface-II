@@ -1,8 +1,9 @@
-
+/* Add CSS styling here */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -28,83 +29,162 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
-    max-width: 100%;
-    border: 1px solid red;
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 html{
-    font-size: 62.5%;
+    font-size:62.5%;
 }
-body{
-    font-size:1.8rem;
-    line-height:1.5;
-    color:black;
-    background-color: #cb997e;
-    font-family: 'Irish Grover', cursive;
-    
-}
-.head{
-    display: flex;
-    flex-wrap: wrap;
-    
-}
- h1{ 
-    
-    font-size:6rem;
-    margin-left: 5%;
-    margin-top: 1%;
-    
-    }
-.destinations {
-  
-   display: flex;
-   justify-content: space-evenly;
-   font-size: 2rem;
-   margin-bottom: 2%;
-}
-a{
-    text-decoration: none;
-    color: black;
-    border: 1px solid #b7b7a4;
-    border-radius: 50%  ;
-    background-color: #b7b7a4;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-}
-a:hover{
-    background-color: black;
-    border: 1px solid black;
-    color:#b7b7a4;
-}
-.second{
-    display: flex;
-    flex-direction: row;
-    flex-direction: row;  
-    text-align: flex-end; 
-
-
-}
-.mainimage{
-    width:40%;
-img{
-    width:50%;
-
-}
-.title{
-    display: flex;
+header{
+    display:flex;
     flex-direction: column;
-
-
+    align-items: center;
+    margin:5%;
+}
+h1{
+   font-size:5rem; 
+   margin:2%;
+}
+nav{
+    display:flex;
+    width:50%;
+    justify-content: space-evenly;
+    margin:2%;
+}
+nav a{
+    font-size:1.8rem;
+    text-decoration: none;
+    padding:1%;
+    color:black;
+}
+h2{
+    font-size:3rem;
+    margin:1%;
+}
+ p{
+    font-size:1.5rem;
+    margin:2%;
+    width:80%;
+    text-align: center;
+}
+.text-info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.middle-img{
+    width:100%;
+    margin-left:10%;
+    margin-bottom:2%;
+    height:auto;
+    max-width:720px;
+}
+.tablet-photo{
+    display:none;
+}   
+.gallery{
+display:flex;
+flex-direction: row-reverse;
+justify-content:center;
+align-items: center;
 
 }
-.title h2{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 3rem;
-    margin-right:10%;
+.gallery img{
+    width:15%;
+    margin:2%;
 }
+.gallery p{
+    font-size:1.5rem;
+    text-align: center;
+    
+    
+}
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:2%;
+    text-align: center;
+    
+}
+footer h3{
+    font-size:2rem;
+}
+@media(max-width:800px){
+    h1{
+        font-size:4rem;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a{
+        font-size:2rem;
+    }
+    header p{
+        font-size:2rem;
+        }
+    .tablet-photo{
+        display:inline-block
+    }
+    .desktop-photo{
+        display:none;
+    }
+    .tablet-photo{
+        display:inline;
+    }
+   
+    .gallery p{
+        width:100%;
+        font-size:2rem;
+        padding:1%;
+        margin:2%;
+    }
+    .gallery{
+        flex-wrap:wrap-reverse;
+    }
+    .gallery img{
+        width:40%;
+    }
+    footer{
+    background-color:lightslategray;
+    }
+    @media(max-width:500px){
+        nav a{
+            margin:2%;
+            border: black 1px solid;
+            width: 80%;
+            text-align: center;
+        }
+        p{
+            margin:2%;
+        }
+        .middle-img{
+            display:none;
+        }
+        .gallery{
+            flex-direction: column-reverse;
+        }
+        .gallery img{
+            margin:2%;
+            width:70%;
+        }
+    }
 
